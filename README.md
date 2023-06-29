@@ -21,14 +21,12 @@ A repository to prepare for technical interviews. This repository contains a col
 
 ## Resources
 
-1. LeetCode:https://leetcode.com/problems/path-with-maximum-probability/solutions/
+1. LeetCode
+2. GFG
 
 ## Questions
 
-1. Include a collection of interview questions.
-2. Categorize the questions based on different topics or difficulty levels.
-3. Provide brief explanations or hints for each question.
-4. If applicable, include links to solutions or reference implementations.
+1. 29 Jun - https://leetcode.com/problems/path-with-maximum-probability/solutions/
 
 ## License
 
