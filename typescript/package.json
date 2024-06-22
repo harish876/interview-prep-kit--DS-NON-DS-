@@ -1,0 +1,33 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "A repository to prepare for technical interviews. This repository contains a collection of resources, questions, and solutions to help me ace my next interview.",
+  "dependencies": {
+    "jest": "^29.5.0",
+    "node-fetch": "^3.3.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@types/jest": "^29.5.12",
+    "babel-jest": "^29.5.0",
+    "ts-jest": "^29.1.1"
+  },
+  "scripts": {
+    "test": "tsc && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harish876/Data-Structures-and-Algorithms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harish876/Data-Structures-and-Algorithms/issues"
+  },
+  "homepage": "https://github.com/harish876/Data-Structures-and-Algorithms#readme"
+}

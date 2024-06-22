@@ -1,4 +1,3 @@
-//[1<-2*  3]
 
 type Node<T> = {
     value: T,
@@ -6,35 +5,35 @@ type Node<T> = {
 }
 
 export default class Stack<T> {
-    
+
     public length: number
     public top: Node<T>
 
-    constructor(){
-        
+    constructor() {
+
         this.top = undefined
         this.length = 0
     }
 
     push(value: T): void {
         const new_node = { value } as Node<T>
-        if(this.length === 0){
+        if (this.length === 0) {
             this.top = new_node
-            this.length ++
+            this.length++
             return
         }
 
         new_node.prev = this.top
         this.top = new_node
-        this.length ++
+        this.length++
     }
 
     pop(): T | undefined {
-        if(!this.top){
+        if (!this.top) {
             return undefined
         }
 
-        this.length = Math.max(0,this.length-1)
+        this.length = Math.max(0, this.length - 1)
 
         const prev_top = this.top
         this.top = this.top.prev

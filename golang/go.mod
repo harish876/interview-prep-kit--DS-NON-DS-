@@ -1,3 +1,3 @@
-module golang-ds-practice
+module github.com/harish876/polyglot-dsa
 
-go 1.20
+go 1.22.0
