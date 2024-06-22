@@ -1,35 +1,33 @@
-# Interview Preparation
+# TL;DR
 
-A repository to prepare for technical interviews. This repository contains a collection of resources, questions, and solutions to help me ace my next interview.
+A Repository for learning data structures and algorithms in different languages. I want to make this comprehensive for myself and anyone interested in learning stuff. This can eventually turn into a repository where this becomes a one stop shop for resources pertaining to a programming language.
+My intention behind this repositorys are:
+
+1. Learning data structures, implementing stuff in different languages to improve proficency.
+2. Learning the build process/ compilation process for different languages, just the idiomatic way of setting up module imports etc.
+3. Learn testing, and the best way to TDD for different languages. Like golang has a built in testing , javascript has jest, rust has a built in testing support,
+python has unitttest etc...
+
 
 ## Table of Contents
 
 - [Getting Started](#getting-started)
 - [Topics Covered](#topics-covered)
-- [Resources](#resources)
-- [Questions](#questions)
-- [Contributing](#contributing)
-- [License](#license)
+- [Improvements](#improvements)
 
-## Getting Started
 
-1. Data Structures and Algorithms
+## Data Structures Covered
 
-## Topics Covered
+ - Go
+| Concept                   |           Tests                |      Status             |
+| --------                  | -------                        | ---------               | 
+| Singly Linked List        |          Yes                   |     Improve Tests       |
+| Binary Search Tree        |          Yes                   |     Improve Tests       |            
+| Least Recently Used Cache |          Yes                   |     Improve Tests       |
 
-- Date 29 Jun: Priority Queue and Heaps - Min Heap and Max Heap - How to implement a heap using a vector in CPP - Dijkstra's Algorithm
 
-## Resources
+## Improvements
 
-1. LeetCode
-2. GFG
-
-## Questions
-
-1. 29 Jun - https://leetcode.com/problems/path-with-maximum-probability/solutions/
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-State what license your project is under and provide a link to the license file.
-
+-  Actively getting good at golang by implementing all new stuff in it.
+-  Improve Golang code structure by using interfaces.
+-  Better Test suites accross the board
