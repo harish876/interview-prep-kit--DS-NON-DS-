@@ -81,3 +81,170 @@ let () =
     result;
   print_newline ()
 ;;
+
+(* Factorial again but tail recursive*)
+let factorial1 n =
+  let rec aux n acc =
+    match n with
+    | 1 -> acc
+    | _ -> aux (n - 1) (acc * n)
+  in
+  aux n 1
+;;
+
+let () = assert (factorial1 3 = 6)
+
+(* Hackerrank functional programming exercies*)
+
+let rec print_ntimes n =
+  match n with
+  | 0 -> ()
+  | _ ->
+    let () = print_endline "Hello World" in
+    print_ntimes (n - 1)
+;;
+
+print_ntimes 0
+
+(*let rec read_till_eof acc =
+  try
+  let line = read_line () in
+  let number = int_of_string line in
+  read_till_eof (number :: acc)
+  with
+  | End_of_file -> List.rev acc
+  ;;
+*)
+
+(* read from the stdin *)
+(*
+   let start () =
+   print_endline "Enter a Integer Value";
+   let value = read_int () in
+   let result = read_till_eof [] in
+   let is_equal x = x != value in
+   let filtered_result = List.filter is_equal result in
+   List.iter (fun num -> Printf.printf "%d " num) filtered_result;
+   print_newline ()
+   ;;
+*)
+
+(*let filter_odd_positions () =
+  let result = read_till_eof [] in
+  result
+  |> List.mapi (fun idx x -> idx, x)
+  |> List.filter (fun (idx, _) -> idx mod 2 = 0)
+  |> List.map snd
+  |> List.iter (Printf.printf "%d")
+  ;;*)
+
+(*
+   let rec reverse lst acc =
+   match lst with
+   | [] -> acc
+   | h :: t -> reverse t (h :: acc)
+   ;;
+
+   let reverse_lst () =
+   let result = read_till_eof [] in
+   let reversed_result = reverse result [] in
+   List.iter (Printf.printf "%d\n") reversed_result
+   ;;
+*)
+
+(*
+   let rec odd_sum_acc lst idx acc =
+   if idx >= List.length lst
+   then acc
+   else if List.nth lst idx mod 2 <> 0
+   then odd_sum_acc lst (idx + 1) (acc + List.nth lst idx)
+   else odd_sum_acc lst (idx + 1) acc
+   ;;
+
+   let odd_sum () =
+   let result = read_till_eof [] in
+   let odd_sum = odd_sum_acc result 0 0 in
+   Printf.printf "%d" odd_sum
+   ;;
+
+   odd_sum () *)
+
+(*let rec read_lines () =
+  try
+  let line = read_line () in
+  int_of_string line :: read_lines ()
+  with
+  | End_of_file -> []
+  ;;
+
+  let rec repeat num freq acc =
+  match freq with
+  | 0 -> acc
+  | _ -> repeat num (freq - 1) (num :: acc)
+  ;;
+
+  let f n arr =
+  let result = List.map (fun value -> repeat value n []) arr in
+  List.flatten result
+  ;;
+
+  let () =
+  let (n :: arr) = read_lines () in
+  let ans = f n arr in
+  List.iter
+  (fun x ->
+  print_int x;
+  print_newline ())
+  ans
+  ;; *)
+(*
+   let rec read_test_cases n acc =
+   match n with
+   | 0 -> acc
+   | _ ->
+   let line = read_line () in
+   let value = float_of_string line in
+   read_test_cases (n - 1) (value :: acc)
+   ;;
+
+   let factorial n =
+   let rec aux n acc =
+   match n with
+   | 1 -> acc
+   | _ -> aux (n - 1) (float_of_int n *. acc)
+   in
+   aux n 1.0
+   ;;
+
+   let rec find_exp n x acc =
+   match n with
+   | 0 -> acc +. 1.0
+   | curr -> find_exp (n - 1) x (acc +. ((x ** float_of_int curr) /. factorial curr))
+   ;;
+
+   let () =
+   let line = read_line () in
+   let num_of_test_cases = int_of_string line in
+   let test_cases = read_test_cases num_of_test_cases [] in
+   let results = List.map (fun num -> find_exp 9 num 0.0) test_cases in
+   List.rev results |> List.iter (fun value -> Printf.printf "%f\n" value)
+   ;;
+*)
+
+let str_to_int_list str =
+  let rec aux str idx acc =
+    if idx < 0
+    then acc
+    else if int_of_char str.[idx] - int_of_char '0' >= 0
+            && int_of_char str.[idx] - int_of_char '0' <= 9
+    then aux str (idx - 1) ((int_of_char str.[idx] - int_of_char '0') :: acc)
+    else aux str (idx - 1) acc
+  in
+  aux str (String.length str - 1) []
+;;
+
+let () =
+  let line = read_line () in
+  let values = str_to_int_list line in
+  values |> List.iter (fun value -> Printf.printf "%d " value)
+;;

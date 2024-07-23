@@ -37,3 +37,8 @@ func Q1(arr []int) int {
 	}
 	return result
 }
+
+/*
+{ foo: "bar" | baz : "baz"}
+{ foo: "bar" | baz : "baz"}
+*/
