@@ -1,0 +1,5 @@
+(library
+ (name solutions)
+ (public_name ocaml.solutions )
+ (modules  ocamlbook hackerrank utils)
+ (libraries base))

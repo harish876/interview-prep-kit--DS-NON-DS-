@@ -1,1 +1,4 @@
-(executable (name getting_started ))
+(executable 
+  (name main )
+  (public_name ocaml)
+  (libraries ocaml.solutions))
